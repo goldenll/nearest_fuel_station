@@ -5,9 +5,9 @@ class Fuel
               :access_times
 
   def initialize(data)
-    @name = data[:fuel_stations].first[:station_name]
-    @address = data[:fuel_stations].first[:street_address]
-    @fuel_type = data[:fuel_stations].first[:fuel_type_code]
-    @access_times = data[:fuel_stations].first[:access_days_time]
+    @name = data[:fuel_stations][0][:station_name]
+    @address = data[:fuel_stations][0][:street_address]
+    @fuel_type = data[:fuel_stations][0][:fuel_type_code]
+    @access_times = data[:fuel_stations][0][:access_days_time]
   end
 end
